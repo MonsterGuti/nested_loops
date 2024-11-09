@@ -1,0 +1,15 @@
+destination = input("Enter the destination you want to visit (or 'End' to stop): ")
+price = float(input(f"Enter the budget required for {destination}: "))
+total_savings = 0.0
+
+while destination != "End":
+    while total_savings < price:
+        saving = float(input("Enter the amount you have saved: "))
+        total_savings += saving
+    print(f"Going to {destination}!")
+    total_savings = 0.0
+    destination = input("Enter the next destination (or 'End' to stop): ")
+    if destination == "End":
+        print("The program has ended.")
+        break
+    price = float(input(f"Enter the budget required for {destination}: "))
