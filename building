@@ -1,0 +1,12 @@
+total_floors = int(input("Enter the number of floors: "))
+total_rooms = int(input("Enter the number of rooms per floor: "))
+
+for floor in range(total_floors, 0, -1):
+    for room in range(total_rooms):
+        if floor == total_floors:
+            print(f"L{floor}{room}", end=" ")
+        elif floor % 2 == 0:
+            print(f"O{floor}{room}", end=" ")
+        else:
+            print(f"A{floor}{room}", end=" ")
+    print()
