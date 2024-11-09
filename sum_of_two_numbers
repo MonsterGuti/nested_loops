@@ -1,0 +1,18 @@
+start = int(input("Enter the start of the range: "))
+end = int(input("Enter the end of the range: "))
+magic_number = int(input("Enter the magic number to find: "))
+counter = 0
+found = False
+
+for num_1 in range(start, end + 1):
+    for num_2 in range(start, end + 1):
+        counter += 1
+        if (num_1 + num_2) == magic_number:
+            found = True
+            print(f"Combination N:{counter} ({num_1} + {num_2} = {magic_number})")
+            break
+    if found:
+        break
+
+if not found:
+    print(f"{counter} combinations - none of them add up to the magic number {magic_number}")
