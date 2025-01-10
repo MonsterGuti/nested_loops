@@ -1,0 +1,10 @@
+while True:
+    my_string = input("Input your word: ")
+    double_char = ""
+    if my_string == "SoftUni":
+        continue
+    if my_string == "End":
+        break
+    for char in my_string:
+        double_char += char * 2
+    print(f"Your doubled word: {double_char}")
