@@ -1,0 +1,11 @@
+special_year = int(input())
+import sys
+for year in range(special_year + 1, sys.maxsize + 1):
+    my_list = []
+    for digit in str(year):
+        my_list.append(int(digit))
+    if len(my_list) == len(set(my_list)):
+        print(year)
+        break
+
+
